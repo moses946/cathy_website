@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600&display=swap');
+
+$firaSans: 'Fira Sans', sans-serif;
+
+
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+  font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: 100%;
+  font-family: $firaSans;
+  background-color: #F0F8E1;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+.card-hover {
+  $root: &;
+  width: 360px;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+box-shadow: 2px 5px 9px #888888;
+transition: box-shadow transform 0.3s ease;
+
+
+  &:has(#{$root}__link:hover) {
+
+    #{$root}__extra {
+      transform: translateY(0);
+      transition: transform 0.35s;
+    }
+  }
+
+  &:hover {
+    box-shadow: 5px 8px 12px #2c2b2b;
+
+    transform: scale(1.05);
+    #{$root} {
+        
+
+      &__content {
+        background-color: #DEE8C2;
+        bottom: 100%;
+        transform: translateY(100%);
+        padding: 50px 60px;
+        transition: all 0.25s cubic-bezier(.1,.72,.4,.97);
+      }
+
+      &__link {
+        opacity: 1;
+        transform: translate(-50%, 0);
+        transition: all 0.2s 0.35s cubic-bezier(.1,.72,.4,.97);
+      }
+    }
+
+    img {
+      transform: scale(1);
+      transition: 0.35s 0.1s transform cubic-bezier(.1,.72,.4,.97);
+    }
+  }
+
+  &__content {
+    width: 100%;
+    text-align: center;
+    background-color: #86B971;
+    // background-color: #3A14A5;
+    padding: 0 60px 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(0);
+    transition: all 0.25s 0.35s cubic-bezier(.1,.72,.4,.97);
+    will-change: bottom, background-color, transform, padding;
+    z-index: 1;
+
+    &::before,
+    &::after {
+      content: '';
+      width: 100%;
+      height: 120px;
+      background-color: inherit;
+      position: absolute;
+      left: 0;
+      z-index: -1;
+    }
+
+    &::before {
+      top: -80px;
+      clip-path: ellipse(60% 80px at bottom center);
+    }
+
+    &::after {
+      bottom: -80px;
+      clip-path: ellipse(60% 80px at top center);
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 0.1em;
+
+    span {
+      color: #2d7f0b;
+    }
+  }
+
+  &__text {
+    font-size: 0.75rem;
+  }
+
+  &__link {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%, 10%);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-decoration: none;
+    color: #2d7f0b;
+    opacity: 0;
+    padding: 10px;
+    transition: all 0.25s;
+
+    &:hover {
+      
+      svg {
+        transform: translateX(4px);
+      }
+    }
+
+    svg {
+      width: 18px;
+      margin-left: 4px;
+      transition: transform 0.2s;
+    }
+  }
+}
+
+.card-hover img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    // object-position: center;
+    // z-index: -1;
+    transform: scale(1.2);
+    transition: 0.25s 0.25s transform cubic-bezier(.1,.72,.4,.97);
+  }
+  .bottom-sheet {
+    position: fixed;
+    left: 0;
+    bottom: -100%;
+    width: 100%;
+    height: 70%; /* Occupy 70% of the screen height */
+    background-color: white;
+    box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.2);
+    transition: bottom 0.3s ease;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bottom-sheet__content {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+  
+  .close {
+    font-size: 2em;
+    cursor: pointer;
+    padding: 10px;
+    text-align: right;
+  }
+  
+  .carousel-container {
+    width: 100%;
+    height: 50%; /* 50% for the carousel */
+    overflow: hidden;
+  }
+  
+  .carousel img {
+    min-width: 50%; /* Ensures the image width fits the container */
+    height: auto; /* Maintains the aspect ratio */
+    object-fit: contain; /* Ensures the image covers the container without stretching */
+    display: block; /* Ensures no inline space around the image */
+    max-height: 50%; /* Ensures the image height fits the container */
+    margin:auto;
+  }
+  
+  .project-details {
+    padding: 20px;
+    height: 50%; /* 50% for the project description */
+  }
