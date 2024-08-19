@@ -117,6 +117,13 @@ nav{
     color: #1F1D42;
     transform: scale(1.2);
   }
+  .hero-img{
+    display: flex;
+    justify-content: center;
+  }
+  .hero-img img{
+    max-width: 60%;
+  }
 
   /* About me */
   .about-me{
@@ -150,12 +157,10 @@ nav{
 }
 
   .project-cards {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 7em; /* Space between the cards */
-  }
-
+    display: grid;
+  gap: 4em;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
   .projects h3{
     text-align: center;
     margin: 1.5em;
@@ -213,7 +218,7 @@ nav{
   .title_bar{
     display: flex;
     /* justify-content: space-evenly; */
-    padding: 1em 1em 0;
+    padding: 1em 3em 0;
   }
   .back_btn{
     justify-self: start;
@@ -233,11 +238,18 @@ nav{
   }
 
   .carousel_container{
-    padding: 1em 3em 2em;
+    padding: 1em 3em 1em;
   }
   
   .project_desc{
-    padding: 1em;
+    padding: 3em;
+  }
+  .project_desc a{
+    text-decoration: none;
+    color: #4D20CC;
+  }
+  .project_desc a:hover{
+
   }
 
   .carousel_images{
@@ -251,6 +263,10 @@ nav{
     width: 5%; /* Reduce width so they are closer to the image */
     top: 50%;
     transform: translateY(-50%);
+    color: #1F1D42;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {    background-color: #1F1D42;
 }
 
 .carousel-control-prev {

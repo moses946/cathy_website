@@ -173,12 +173,11 @@ img {
 }
 
 .carousel img {
-  min-width: 50%; /* Ensures the image width fits the container */
-  height: auto; /* Maintains the aspect ratio */
+  min-width: 70%; /* Ensures the image width fits the container */
   -o-object-fit: contain;
      object-fit: contain; /* Ensures the image covers the container without stretching */
   display: block; /* Ensures no inline space around the image */
-  max-height: 50%; /* Ensures the image height fits the container */
+  max-height: 90%; /* Ensures the image height fits the container */
   margin: auto;
 }
 

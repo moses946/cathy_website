@@ -12,9 +12,11 @@ document.querySelector('.burger-menu').addEventListener('click', function() {
 
     if (projectId === 'project1') {
         carousel.innerHTML = `
-            <div><img src="./assets/Untitled3.jpg" alt="Project Image 1"></div>
-            <div><img src="./assets/Untitled2.jpg" alt="Project Image 2"></div>
-            <div><img src="./assets/Untitled.jpg" alt="Project Image 3"></div>
+            <div><img src="./assets/Dorcas Destiny/Image 1.jpg" alt="Project Image 1"></div>
+            <div><img src="./assets/Dorcas Destiny/Image 2.jpg" alt="Project Image 2"></div>
+            <div><img src="./assets/Dorcas Destiny/Image 3.jpg" alt="Project Image 3"></div>
+            <div><img src="./assets/Dorcas Destiny/Image 4.jpg" alt="Project Image 3"></div>
+            <div><img src="./assets/Dorcas Destiny/Image 5.jpg" alt="Project Image 3"></div>
         `;
         projectDetails.innerHTML = `
             <h3>Women Empowerment Program</h3>
